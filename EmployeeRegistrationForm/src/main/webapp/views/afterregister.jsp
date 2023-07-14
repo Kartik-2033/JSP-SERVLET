@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="com.myjava.registrationform.database.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -161,7 +162,7 @@
 			<h3 id='status'> Success </h3>
 		</div>
 		<div id='lower-side'>
-			<p id='message'>Employee successfully registered. </p> 
+			<p id='message'>Employee successfully Registred. </p> 
 		</div>
 	</div>
 </body>
