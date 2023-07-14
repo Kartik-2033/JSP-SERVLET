@@ -36,7 +36,7 @@ public class Employee {
 
 	public void setFirstName(String firstName) {
 		if (firstName.isBlank() || firstName.isEmpty()) {
-			throw new RuntimeException("Subclasses of Valueables cannot take in an empty String or null value for the \\\"first Name\\\" constructor");
+			throw new RuntimeException("Subclasses of Valueables cannot take in an empty String or null value for the \\\"First Name\\\" constructor");
 		} else {
 			this.firstName = firstName;
 		}
