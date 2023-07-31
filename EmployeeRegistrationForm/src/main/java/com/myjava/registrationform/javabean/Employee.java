@@ -1,12 +1,11 @@
 package com.myjava.registrationform.javabean;
-
 /**
- * @desc JavaBean class used in jsp action tags.
+ * @desc Use 'Employee' class to set and get data.
  * @author Kartik Panchal
  */
 public class Employee {
 
-	//Creating all variables
+	// Create all variables
 	private String firstName;
 	private String lastName;
 	private String userName;
@@ -14,29 +13,34 @@ public class Employee {
 	private long mobileNumber;
 	private String address;
 
-	// Getter And setter method
+	// Getter and Setter methods
 	public String getFirstName() {
 		return firstName;
 	}
+
 	public String getLastName() {
 		return lastName;
 	}
+
 	public String getUserName() {
 		return userName;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public long getMobileNumber() {
 		return mobileNumber;
 	}
+
 	public String getAddress() {
 		return address;
 	}
 
 	public void setFirstName(String firstName) {
 		if (firstName.isBlank() || firstName.isEmpty()) {
-			throw new RuntimeException("Subclasses of Valueables cannot take in an empty String or null value for the \\\"First Name\\\" constructor");
+			throw new RuntimeException("First name cannot be null or empty string.");
 		} else {
 			this.firstName = firstName;
 		}
@@ -44,7 +48,7 @@ public class Employee {
 
 	public void setLastName(String lastName) {
 		if (lastName.isBlank() || lastName.isEmpty()) {
-			throw new RuntimeException("Subclasses of Valueables cannot take in an empty String or null value for the \\\"Last Name\\\" constructor");
+			throw new RuntimeException("Last name cannot be null or empty string.");
 		} else {
 			this.lastName = lastName;
 		}
@@ -52,7 +56,7 @@ public class Employee {
 
 	public void setUserName(String userName) {
 		if (userName.isBlank() || userName.isEmpty()) {
-			throw new RuntimeException("Subclasses of Valueables cannot take in an empty String or null value for the \\\"User Name\\\" constructor");
+			throw new RuntimeException("User name cannot be null or empty string.");
 		} else {
 			this.userName = userName;
 		}
@@ -60,7 +64,7 @@ public class Employee {
 
 	public void setPassword(String password) {
 		if (password.isBlank() || password.isEmpty()) {
-			throw new RuntimeException("Subclasses of Valueables cannot take in an empty String or null value for the \\\"Password\\\" constructor");
+			throw new RuntimeException("Password cannot be null or empty.");
 		} else {
 			this.password = password;
 		}
@@ -68,14 +72,14 @@ public class Employee {
 
 	public void setMobileNumber(String mobileNumber) {
 		if (mobileNumber.isBlank() || mobileNumber.isEmpty()) {
-			throw new RuntimeException("Subclasses of Valueables cannot take in an empty String or null value for the \\\"Mobile Number\\\" constructor");
-		} else { 
+			throw new RuntimeException("Mobile number cannot be null or empty numbers.");
+		} else {
 			this.mobileNumber = Long.parseLong(mobileNumber);
 		}
 	}
 
 	public void setAddress(String address) {
-			this.address = address;
+		this.address = address;
 	}
 
 }

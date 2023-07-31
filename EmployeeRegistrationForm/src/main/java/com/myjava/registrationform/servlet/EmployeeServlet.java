@@ -13,6 +13,8 @@ import com.myjava.registrationform.javabean.Employee;
 
 /**
  * Servlet implementation class EmployeeServlet
+ * 
+ * @author Kartik Panchal
  */
 @WebServlet("/register")
 public class EmployeeServlet extends HttpServlet {
@@ -37,7 +39,6 @@ public class EmployeeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		EmployeeDao employeeDao = new EmployeeDao();
 		Employee employee = new Employee();
 
@@ -45,7 +46,7 @@ public class EmployeeServlet extends HttpServlet {
 		employee.setLastName(request.getParameter("lastName").trim());
 		employee.setUserName(request.getParameter("userName").trim());
 		employee.setPassword(request.getParameter("password").trim());
-		employee.setMobileNumber(request.getParameter("mobileNumber"));
+		employee.setMobileNumber(request.getParameter("mobileNumber").trim());
 		employee.setAddress(request.getParameter("address"));
 
 		try {

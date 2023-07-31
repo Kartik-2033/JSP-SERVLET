@@ -3,10 +3,10 @@ package com.myjava.registrationform.connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
 /**
- * @category Database Connection
+ * @desc Database connection
  * @author Kartik Panchal
- *
  */
 public class DatabaseConnector {
 
