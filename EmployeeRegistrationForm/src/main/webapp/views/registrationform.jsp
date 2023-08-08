@@ -45,18 +45,18 @@
 			</header>
 			<div class="form-section">
 				<form action="<%= request.getContextPath() %>/register" method="post" name="EmployeeForm" id="EmployeeForm">
-						<div class="signup-box">
-							<input type="text" class="ele" name="firstName" id="firstName" placeholder="Enter your first name" pattern="[A-Za-z]*" onkeydown="return /[A-Za-z]/i.test(event.key)" autocomplete="off"/>
-							<input type="text" class="ele" name="lastName" id="lastName" placeholder="Enter your last name" pattern="[A-Za-z]*" onkeydown="return /[A-Za-z]/i.test(event.key)" autocomplete="off"/>
-							<input type="text" class="ele" name="userName" id="userName" placeholder="Enter your user name" pattern="[A-Za-z0-9]*" onkeydown="return /[A-Za-z0-9]/i.test(event.key)" autocomplete="off"/>
-							<input type="password" class="ele" name="password" id="emp_pass" placeholder="Enter your password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,30}" autocomplete="off" autocomplete="off"/>
-							<input type="text" class="ele" name="address" placeholder="Enter your address" autocomplete="off"/>
-							<input type="number" class="ele" name="mobileNumber" id="emp_mobile_number" placeholder="Enter your mobile number" pattern="[0-9]{10}" maxlength="10" autocomplete="off"/>
-							<div class="sample">
-								<button type="submit" id="submit-btn" class="clkbtn">Register</button>
-								<button type="reset" class="clkbtn" id="btnRes">Reset</button>
-							</div>
+					<div class="signup-box">
+						<input type="text" class="ele" name="firstName" id="firstName" placeholder="Enter your first name" pattern="[A-Za-z]*" onkeydown="return /[A-Za-z]/i.test(event.key)" autocomplete="off"/>
+						<input type="text" class="ele" name="lastName" id="lastName" placeholder="Enter your last name" pattern="[A-Za-z]*" onkeydown="return /[A-Za-z]/i.test(event.key)" autocomplete="off"/>
+						<input type="text" class="ele" name="userName" id="userName" placeholder="Enter your user name" pattern="[A-Za-z0-9]*" onkeydown="return /[A-Za-z0-9]/i.test(event.key)" autocomplete="off"/>
+						<input type="password" class="ele" name="password" id="emp_pass" placeholder="Enter your password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,30}" autocomplete="off" autocomplete="off"/>
+						<input type="text" class="ele" name="address" placeholder="Enter your address" autocomplete="off"/>
+						<input type="number" class="ele" name="mobileNumber" id="emp_mobile_number" placeholder="Enter your mobile number" pattern="[0-9]{10}" maxlength="10" autocomplete="off"/>
+						<div class="sample">
+							<button type="submit" id="submit-btn" class="clkbtn">Register</button>
+							<button type="reset" class="clkbtn" id="btnRes">Reset</button>
 						</div>
+					</div>
 				</form>
 			</div>
 		</div>

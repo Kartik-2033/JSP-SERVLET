@@ -8,14 +8,14 @@ import com.myjava.registrationform.connection.DatabaseConnector;
 import com.myjava.registrationform.javabean.Employee;
 
 /**
- * @desc Use 'EmployeeDao' class for data transactions in the database.
+ * @desc use 'EmployeeDao' class for data transaction in database
  * @author Kartik Panchal
  */
 public class EmployeeDao {
 
 	Connection connection = null;
 
-	public int registerEmployee(Employee employee) throws ClassNotFoundException {
+	public int registerEmployee(Employee employee) throws Exception {
 		String INSERT_SQL = "INSERT INTO employee_details"
 				+ "(emp_first_name, emp_last_name, emp_user_name, emp_password, emp_address, emp_mobile_number) VALUES"
 				+ "(?,?,?,?,?,?);";
@@ -33,28 +33,23 @@ public class EmployeeDao {
 			preparedStatement.setString(5, employee.getAddress());
 			preparedStatement.setLong(6, employee.getMobileNumber());
 			rowCount = preparedStatement.executeUpdate();
-		} catch (SQLException e) {
-			printSQLException(e);
-		} catch (Exception exe) {
-			exe.printStackTrace();
+		} catch (Exception exception) {
+			printException(exception);
 		}
-
 		return rowCount;
 	}
 
-	private void printSQLException(SQLException exe) {
-		for (Throwable e1 : exe) {
-			if (e1 instanceof SQLException) {
-				e1.printStackTrace(System.err);
-				System.err.println("SQLState: " + ((SQLException) e1).getSQLState());
-				System.err.println("Error code: " + ((SQLException) e1).getErrorCode());
-				System.err.println("Message: " + e1.getMessage());
-				Throwable t = e1.getCause();
-				while (t != null) {
-					System.out.println("Cause: " + t);
-					t = t.getCause();
-				}
-			}
+	private void printException(Exception exception) {
+		if (exception instanceof SQLException) {
+			exception.printStackTrace(System.err);
+			System.err.println("SQLState : " + ((SQLException) exception).getSQLState());
+			System.err.println("Error code : " + ((SQLException) exception).getErrorCode());
+			System.err.println("Message : " + exception.getMessage());
+		} else if (exception instanceof RuntimeException){
+			exception.printStackTrace(System.err);
+			System.err.println("Message : " + exception.getMessage());
+		} else {
+			System.err.println("Sorry for inconvenience.");
 		}
 	}
 
